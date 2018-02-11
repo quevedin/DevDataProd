@@ -1,0 +1,46 @@
+---
+title: "Course Project: Shiny Application and Reproducible Pitch"
+author: "Lucas Fernandez Seivane"
+date: "11 de febrero de 2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Presentation for Developing Data Products
+
+For the final project of Developing Data Products I selected a very simple project: visualization of the dataset of
+the dataset of the Abalone Dataset and running a simple lineal regression. The dataset comes from
+https://archive.ics.uci.edu/ml/datasets/abalone
+
+## Description and application of the dataset
+Abalone is a mollusc with high importance in acquiculture and gastronomy. Predicting the viability
+and optimizing the (slow) growth of specimens means the viability or the bankrrupcy of a company.
+
+```{r abalone, echo = TRUE}
+abalone <- read.csv(
+  "http://archive.ics.uci.edu/ml/machine-learning-databases/abalone/abalone.data", 
+                    header = FALSE)
+names(abalone) <- c("sex", "length", "diameter", "height", "weight.whole",
+                    "weight.shucked", "weight.viscera", "weight.shell", "rings")
+```
+## Data summary
+```{r, echo = TRUE}
+summary(abalone)
+```
+
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+
